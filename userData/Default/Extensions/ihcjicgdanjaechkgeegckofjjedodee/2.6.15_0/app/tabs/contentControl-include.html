@@ -1,0 +1,171 @@
+<div id="content-control-include">
+
+    <div class="error snackbar" style="visibility:hidden">
+        <img src="assets/close-icon.svg" alt="close-icon" />
+        <span id="error-content-control-snackbar"></span>
+    </div>
+    <div class="disabled snackbar content-control" style="visibility:hidden">
+        <img src="assets/check.svg" alt="check-icon" />
+        <span id="content-control-website-added-snackbar"></span>
+    </div>
+    <div class="remove item snackbar" style="visibility:hidden">
+        <img src="assets/check.svg" alt="check-icon" />
+        <span id="content-control-website-deleted-snackbar"></span>
+    </div>
+    <div class="remove all snackbar" style="visibility:hidden">
+        <img src="assets/check.svg" alt="check-icon" />
+        <span id="remove-all-content-control-websites-snackbar"></span>
+    </div>
+
+    <div class="ui modal content-control-row">
+        <img src="assets/close-modal-icon.svg" alt="close icon" class="close-icon" />
+        <div class="content-control-window">
+            <h3 id="content-control-window-title"></h3>
+            <div class="add-url">
+                <label for="content-control-url" class="content-control-url-wrapper" id="content-control-urlz"></label>
+                <div class="ui content-control-url-wrapper first-segment" id='content-control-url-box'>
+                    <input type="text" placeholder="website.com or 123.45.67.89" name="content-control-url"
+                        id="content-control-url" />
+                    <img src="assets/link-icon.svg" class="add-link-icon" data-title="Insert the current website" />
+                    <div class="content-control-modal-link-tooltip" id="content-control-modal-link-tooltip"
+                        style="display: none;">
+                        <span id="insert-current-website-tooltip"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="accept-cancel-buttons">
+                <button id="content-control-cancel" class="ui basic button cancel"></button>
+                <button id="content-control-done" class="ui basic button accept disabled" disabled></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui modal delete-content-control-item hidden">
+        <img src="assets/close-modal-icon.svg" alt="close icon" class="close-icon" id="close-icon" />
+        <div>
+            <h3 id="delete-website-modal-title"></h3>
+            <span id="delete-website-confirmation"></span>
+        </div>
+        <div class="accept-cancel-buttons">
+            <button id="cancel-remove-item" class="ui basic button cancel cancel-remove-item"></button>
+            <button id="yes-remove-item" class="ui basic button accept yes-remove-item"></button>
+        </div>
+    </div>
+
+    <div class="hidden" id="premium-content">
+        <div class="content-control-summary" id="content-control-summary"></div>
+        <div class="content-control-add-website">
+            <button id="content-control-add-website-btn" class="ui basic button">
+                <img src="assets/add-icon.svg" alt="add icon" class="add icon" />
+                <span id="add-website-button-txt"></span>
+            </button>
+        </div>
+
+        <div class="content-control-table">
+            <!-- Table MUST be unstackable due to size of our panel causing it to render like it is on mobile -->
+            <table class="ui compact unstackable table">
+                <thead>
+                    <div class="input search-bar" style="display: none;">
+                        <input type="text" placeholder="" name="content-control-table-search"
+                            id="content-control-table-search" />
+                        <div class="right-icons">
+                            <img src="assets/close-modal-icon.svg" alt="close icon" class="close-icon" />
+                            <img src="assets/search-icon.svg" alt="search icon" class="search-icon" />
+                        </div>
+                    </div>
+                    <tr>
+                        <th class="fourteen wide column" id="content-control-url-col"></th>
+                        <!-- <th class="nine wide column" id="allow-types"></th> -->
+                        <th>
+                            <div class="ui transparent left icon search-bar">
+                                <img src="assets/search-icon.svg" alt="search icon" class="search-icon">
+                            </div>
+                            <div class="search-icon-tooltip" id="search-icon-tooltip" style="display: none;">
+                                <span id="content-control-search-tooltip"></span>
+                            </div>
+                        </th>
+                        <th class="one wide column">
+                            <div class="ui right aligned dropdown icon content-control-table-more disable-protections">
+                                <img src="assets/ellipsis-vertical.svg" alt="ellipsis vertical icon"
+                                    class="search-icon">
+                                <div class="menu">
+                                    <a class="item" id="content-ctrl-open-remove-all-btn"></a>
+                                </div>
+                                <div class="ui modal delete-items-window content all">
+                                    <img src="assets/close-modal-icon.svg" alt="close icon" class="close-icon" />
+                                    <div>
+                                        <h3 id="content-ctrl-delete-all-modal-title"></h3>
+                                        <span id="content-ctrl-delete-all-confirmation"></span>
+                                    </div>
+                                    <div class="accept-cancel-buttons">
+                                        <button id="content-ctrl-cancel-remove-all" class="ui basic button cancel"></button>
+                                        <button id="content-ctrl-yes-remove-all" class="ui basic button accept"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tfoot id="empty-list-footer">
+                    <tr>
+                        <td colspan="4">
+                            <div class="content-control-no-items-box">
+                                <img id="empty-list-img" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" id="content-control-empty"></td>
+                    </tr>
+                </tfoot>
+                <tfoot id="empty-search-footer" class="hidden">
+                    <tr>
+                        <td colspan="4">
+                            <div class="content-control-no-results-box hidden" style="max-height: 180px;">
+                                <img id="empty-search-img" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" id="content-control-no-results">
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <div id="non-premium-content">
+        <div class="grid">
+            <div class="col-2 row-1">
+                <h4 id="non-premium-content-title"></h4>
+            </div>
+            <div class="col-1 row-2">
+                <picture>
+                    <source srcset="assets/con-ctrl-non-premium-1-dark.svg" media="(prefers-color-scheme: dark)">
+                    <img src="assets/con-ctrl-non-premium-1.svg" alt="icon for content control description 1" />
+                </picture>
+            </div>
+            <div class="col-2 row-2">
+                <p id="non-premium-content-msg-1"></p>
+            </div>
+            <div class="col-1 row-3">
+                <picture>
+                    <source srcset="assets/con-ctrl-non-premium-2-dark.svg" media="(prefers-color-scheme: dark)">
+                    <img src="assets/con-ctrl-non-premium-2.svg" alt="icon for content control description 2" />
+                </picture>
+            </div>
+            <div class="col-2 row-3">
+                <p id="non-premium-content-msg-2"><span id="non-premium-content-msg-2a"></span>&nbsp;<strong id="non-premium-content-msg-2b"></strong>.&nbsp;<span id="non-premium-content-msg-2c"></span></p>
+            </div>
+            <div class="col-2 row-4" id="links">
+                <a href="https://malwarebytes.com/premium?guard=1&utm_source=BGreco&utm_medium=content_ctrl_tab" target="_blank" id="get-premium-btn" class="get-premium-btn"></a>
+                <a href="https://links.malwarebytes.com/support/mbbg/content-control" target="_blank" id="learn-more-btn" class="learn-more-btn"></a>
+            </div>
+
+        </div>
+    </div>
+
+</div>

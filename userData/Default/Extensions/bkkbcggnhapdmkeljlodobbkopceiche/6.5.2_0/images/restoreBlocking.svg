@@ -1,0 +1,25 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="2" y="23" width="17" height="21" rx="1" transform="rotate(-90 2 23)" fill="#F3F5FF"/>
+<rect x="19" y="33" width="16" height="19" rx="1" transform="rotate(-90 19 33)" fill="#F3F5FF"/>
+<path d="M8.5 22H4C2.89543 22 2 21.1046 2 20V8C2 6.89543 2.89543 6 4 6H21C22.1046 6 23 6.89543 23 8V8.5" stroke="#DDE8F9" stroke-linecap="round"/>
+<path d="M31 17H36C37.1046 17 38 17.8954 38 19V30C38 31.1046 37.1046 32 36 32H20C19.4477 32 19 31.5523 19 31V31" stroke="#DDE8F9" stroke-linecap="round"/>
+<path d="M8.5 23H4C2.89543 23 2 22.1046 2 21V8C2 6.89543 2.89543 6 4 6H21C22.1046 6 23 6.89543 23 8V9" stroke="#3C454D" stroke-linecap="round"/>
+<path d="M30.5 17H36C37.1046 17 38 17.8954 38 19V31C38 32.1046 37.1046 33 36 33H21C19.8954 33 19 32.1046 19 31V30.5" stroke="#3C454D" stroke-linecap="round"/>
+<path d="M4.00007 12L21 12" stroke="#3C454D" stroke-linecap="round"/>
+<path d="M21.0001 23L36 23" stroke="#3C454D" stroke-linecap="round"/>
+<path d="M22.0001 26L35 26" stroke="#DDE8F9" stroke-linecap="round"/>
+<path d="M7.00005 15L19 15" stroke="#5B96EE" stroke-linecap="round"/>
+<path d="M7.00005 17L19 17" stroke="#5B96EE" stroke-linecap="round"/>
+<path d="M7.00005 19L19 19" stroke="#5B96EE" stroke-linecap="round"/>
+<path d="M22.0001 28L35 28" stroke="#DDE8F9" stroke-linecap="round"/>
+<path d="M22 30L26 30" stroke="#5B96EE" stroke-linecap="round"/>
+<rect x="19.5" y="8.5" width="1" height="1" rx="0.5" fill="#3C454D" stroke="#3C454D"/>
+<rect x="34.5" y="19.5" width="1" height="1" rx="0.5" fill="#3C454D" stroke="#3C454D"/>
+<path d="M1 33H5" stroke="#3C454D" stroke-linecap="round"/>
+<path d="M13 33L35 33" stroke="#3C454D" stroke-linecap="round"/>
+<path d="M8 33H10" stroke="#3C454D" stroke-linecap="round"/>
+<circle cx="19" cy="20" r="8.5" fill="white" stroke="#3C454D"/>
+<circle cx="19" cy="20" r="4.5" fill="#5B96EE" stroke="#5B96EE"/>
+<circle cx="19" cy="20" r="3.5" fill="white" stroke="white"/>
+<path d="M16 23.0002L22.1995 17.0002" stroke="#5B96EE" stroke-linecap="round"/>
+</svg>

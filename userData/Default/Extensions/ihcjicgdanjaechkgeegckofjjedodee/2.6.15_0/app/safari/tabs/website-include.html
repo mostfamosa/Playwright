@@ -1,0 +1,65 @@
+<div id="safari-website-include" class="flex-row include-container">
+    <div id="content-blocker-toggles" class="flex-column website-incldue">
+        <div class="flex-row content-blocker-row">
+            <div class="content-blocker-name">Ads/Trackers</div>
+            <div id="ads-toggle" class="flex-column ui toggle checkbox content-blocker-item-toggle">
+                <input type="checkbox" name="public">
+                <label></label>
+            </div>
+            <div id="ads-toggle-loader" class="flex-column content-blocker-item-toggle"
+                 style="min-width: 63px; display: none;">
+                <i class="circle notch loading icon" style="font-size: 1.5em;color: #0d3ecc;"></i>
+            </div>
+        </div>
+        <div class="flex-row content-blocker-row">
+            <div class="content-blocker-name">Malware</div>
+            <div id="malware-toggle" class="flex-column ui toggle checkbox  content-blocker-item-toggle">
+                <input type="checkbox" name="public">
+                <label></label>
+            </div>
+            <div id="malware-toggle-loader" class="flex-column content-blocker-item-toggle"
+                 style="min-width: 63px; display: none;">
+                <i class="circle notch loading icon" style="font-size: 1.5em;color: #0d3ecc;"></i>
+            </div>
+        </div>
+        <div class="flex-row content-blocker-row">
+            <div class="content-blocker-name">Scams</div>
+            <div id="scams-toggle" class="flex-column ui toggle checkbox content-blocker-item-toggle">
+                <input type="checkbox" name="public">
+                <label></label>
+            </div>
+            <div id="scams-toggle-loader" class="flex-column content-blocker-item-toggle"
+                 style="min-width: 63px; display: none;">
+                <i class="circle notch loading icon" style="font-size: 1.5em;color: #0d3ecc;"></i>
+            </div>
+        </div>
+    </div>
+    <div id="current-site-info" class="flex-column website-incldue">
+        <div id="protection-status">
+            <p id="protection-status-text"></p>
+        </div>
+        <div id="protection-toggle-wrapper">
+            <input type="checkbox" id="toggle-input" checked />
+            <div class="protection-toggle-container">
+                <div class="toggle-label-container toggle-item">
+                    <span class="toggle-label">ON</span>
+                </div>
+                <div class="toggle-icon toggle-item">
+                    <img id="toggle-image" src="../assets/shield-active.svg" alt="Browser Guard shield picture" srcset="">
+                </div>
+            </div>
+        </div>
+
+        <div id="website-info">
+            <p id="allow-site"></p>
+            <div class="flex-row">
+                <div class="flex-column" id="current-website"></div>
+                <div class="h-spacer"></div>
+                <div class="flex-column ui toggle checkbox" id="allow-checkbox">
+                    <input type="checkbox" name="public">
+                    <label></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

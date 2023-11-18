@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'graphik-web';
+    src: url('../../vendor/graphik/web/graphik-bold-web.eot');
+    src: url('../../vendor/graphik/web/graphik-bold-web.eot?#iefix') format('embedded-opentype'),
+    url('../../vendor/graphik/web/graphik-bold-web.woff2') format('woff2'),
+    url('../../vendor/graphik/web/graphik-bold-web.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+}
+@font-face {
+    font-family: 'graphik-web';
+    src: url('../../vendor/graphik/web/graphik-lightitalic-web.eot');
+    src: url('../../vendor/graphik/web/graphik-lightitalic-web.eot?#iefix') format('embedded-opentype'),
+    url('../../vendor/graphik/web/graphik-lightitalic-web.woff2') format('woff2'),
+    url('../../vendor/graphik/web/graphik-lightitalic-web.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+}
+@font-face {
+    font-family: 'graphik-web';
+    src: url('../../vendor/graphik/web/graphik-regular-web.eot');
+    src: url('../../vendor/graphik/web/graphik-regular-web.eot?#iefix') format('embedded-opentype'),
+    url('../../vendor/graphik/web/graphik-regular-web.woff2') format('woff2'),
+    url('../../vendor/graphik/web/graphik-regular-web.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
+@font-face {
+    font-family: 'graphik-web';
+    src: url('../../vendor/graphik/web/graphik-bolditalic-web.eot');
+    src: url('../../vendor/graphik/web/graphik-bolditalic-web.eot?#iefix') format('embedded-opentype'),
+    url('../../vendor/graphik/web/graphik-bolditalic-web.woff2') format('woff2'),
+    url('../../vendor/graphik/web/graphik-bolditalic-web.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: normal;
+}
+@font-face {
+    font-family: 'graphik-web';
+    src: url('../../vendor/graphik/web/graphik-medium-web.eot');
+    src: url('../../vendor/graphik/web/graphik-medium-web.eot?#iefix') format('embedded-opentype'),
+    url('../../vendor/graphik/web/graphik-medium-web.woff2') format('woff2'),
+    url('../../vendor/graphik/web/graphik-medium-web.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+html, body, h1, h2, h3, h4, h5, h6 { font-family: 'graphik-web', sans-serif; }
+a { color: #0d3ecc; }
+#mbbgst-path-top { position: fixed; top: 52px; right: 0; height: 350px; }
+#mbbgst-path-bottom{ position: fixed; bottom: 0; left: 0; height: 250px; }
+#mbbgst-topbar { background-color: #ffffff; height: 52px; box-shadow: 0 6px 2px -2px #dddddddd; position: fixed; top: 0; left: 0; width: 100%; z-index: 25; padding-top: 0; }
+#mbbgst-topbar img { margin: 12px 0 0 50px; height: 25px; }
+#mbbgst-topbar-divider { width: 1px; background-color: grey; height: 21px; margin: 14px 10px 0 10px; display: inline-block; }
+#mbbgst-topbar h3 { display: inline-block; margin: 0; padding: 0; font-size: 22px; position: relative; top: -3px; font-weight: 400; }
+#mbbgst-content { position: relative; z-index: 10; width: 960px; margin: 60px auto; padding: 40px 0 0 0; }
+.ui.card.statistic>.label { padding-top: 10px; color: grey !important; }
+.ui.action.input { width: 650px; }

@@ -1,0 +1,733 @@
+@font-face {
+    font-family: 'graphik-web';
+    src: local('graphik-web'), url('../../vendor/graphik/web/graphik-bold-web.eot');
+    src: local('graphik-web'), url('../../vendor/graphik/web/graphik-bold-web.eot?#iefix') format('embedded-opentype'),
+    url('../../vendor/graphik/web/graphik-bold-web.woff2') format('woff2'),
+    url('../../vendor/graphik/web/graphik-bold-web.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'graphik-web';
+    src: local('graphik-web'), url('../../vendor/graphik/web/graphik-lightitalic-web.eot');
+    src: local('graphik-web'), url('../../vendor/graphik/web/graphik-lightitalic-web.eot?#iefix') format('embedded-opentype'),
+    url('../../vendor/graphik/web/graphik-lightitalic-web.woff2') format('woff2'),
+    url('../../vendor/graphik/web/graphik-lightitalic-web.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'graphik-web';
+    src: local('graphik-web'), url('../../vendor/graphik/web/graphik-regular-web.eot');
+    src: local('graphik-web'), url('../../vendor/graphik/web/graphik-regular-web.eot?#iefix') format('embedded-opentype'),
+    url('../../vendor/graphik/web/graphik-regular-web.woff2') format('woff2'),
+    url('../../vendor/graphik/web/graphik-regular-web.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'graphik-web';
+    src: local('graphik-web'), url('../../vendor/graphik/web/graphik-bolditalic-web.eot');
+    src: local('graphik-web'), url('../../vendor/graphik/web/graphik-bolditalic-web.eot?#iefix') format('embedded-opentype'),
+    url('../../vendor/graphik/web/graphik-bolditalic-web.woff2') format('woff2'),
+    url('../../vendor/graphik/web/graphik-bolditalic-web.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'graphik-web';
+    src: local('graphik-web'), url('../../vendor/graphik/web/graphik-medium-web.eot');
+    src: local('graphik-web'), url('../../vendor/graphik/web/graphik-medium-web.eot?#iefix') format('embedded-opentype'),
+    url('../../vendor/graphik/web/graphik-medium-web.woff2') format('woff2'),
+    url('../../vendor/graphik/web/graphik-medium-web.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+/**
+    Hack to get the icons to render on safari. We also had to copy the font glyphs into guard-app/vendor/fonts
+ */
+@font-face {
+    font-family: 'Icons';
+    src: local('Icons'), url('../../vendor/fonts/icons.eot');
+    src: local('Icons'), url('../../vendor/fonts/icons.woff2') format('woff2'), url('../../vendor/fonts/icons.woff') format('woff');
+    font-style: normal;
+    font-stretch: normal;
+}
+
+body {
+    width: 600px;
+    height: 600px !important;
+    margin: 0;
+    padding: 0;
+}
+
+body > header {
+    position: relative;
+    z-index: 10000;
+}
+
+header {
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.14);
+    background-color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+.header-container-tabs {
+    padding-left: 18px;
+}
+
+.header-container-tabs a.item {
+    font-family: 'graphik-web', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #414042;
+    padding-bottom: 13px;
+}
+
+.header-container-tabs a.item.active {
+    border-bottom: 4px solid #0d3ecc !important;
+    font-weight: 500 !important;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+main .content-container, main .content-container > div, main .content-container .include-container {
+    height: 100%;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-centered {
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    margin-left: 17px;
+    width: 100%;
+}
+
+.logo > img {
+    width: 300px;
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    src: url('../assets/NunitoSans-Light.ttf') format('truetype'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+#safari-allow-include #button-row {
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+#safari-allow-include button {
+    background-color: #0d3ecc;
+    cursor: pointer;
+}
+
+#safari-allow-include button.disabled {
+    background-color: #d7d8df !important;
+}
+
+.toggle-container {
+    width: 140px;
+    height: 56px;
+    border-radius: 33.9px;
+    background-color: #d7d8df;
+    justify-content: space-between;
+    padding: 0 3% 0 3%;
+}
+
+.es .toggle-container {
+    width: 150px;
+}
+
+.toggle-container:hover {
+    cursor: pointer;
+}
+
+.toggle-container > div {
+    border-radius: 33.9px;
+    background-color: white;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 3px 6px 0 rgba(20, 21, 25, 0.4);
+    transition: 0.5s;
+}
+
+.toggle-container > p {
+    transition: 0.5s;
+    font-family: 'Nunito Sans', sans-serif;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.toggle-active-shield {
+    transition: 0.5s;
+    transform: translateX(150%);
+}
+
+.toggle-active {
+    background-color: #0d3ecc;
+    color: white;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #D7DBDD;
+}
+
+.tab {
+    padding: 5px 30px;
+    color: #16A2D7;
+    font-size: 12px;
+    border-bottom: 2px solid transparent;
+}
+
+.tab[data-tab="website"] {
+    padding: 0 !important;
+}
+
+.tab.is-selected {
+    border-bottom-color: #4EBBE4;
+}
+
+.ui.tab {
+    font-family: 'graphik-web', sans-serif;
+}
+
+.hidden, i.icon.hidden, .ui.menu .item.hidden {
+    display: none;
+}
+
+#safari-website-include {
+    align-items: center;
+    color: #141519;
+}
+
+.website-incldue {
+    height: 100%;
+    padding-top: 40px;
+    align-items: center;
+}
+
+#content-blocker-toggles {
+    width: 40%;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #f7f8f9;
+    box-shadow: 5px 0 4px -4px rgba(0, 0, 0, 0.27);
+    z-index: 500;
+}
+
+#current-site-info {
+    width: 60%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#protection-status p {
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.42;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+#protection-toggle-button {
+    margin-top: 38px;
+    margin-bottom: 38px;
+}
+
+.content-blocker-row {
+    margin: 1px 0 30px 0;
+}
+
+.content-blocker-name {
+    width: 120px;
+    font-size: 16px;
+    color: #141519;
+}
+
+.content-blocker-item-toggle {
+    margin-left: 10px;
+    transform: scale(0.85);
+}
+
+#content-blocker-toggles > div > div.flex-column.ui.toggle.checkbox.content-blocker-item-toggle > input:checked ~ label:before {
+    background-color: #0d3ecc !important;
+}
+
+#website-info {
+    font-size: 15px;
+    max-width: 70%;
+}
+
+#website-info p {
+    color: #6a707b;
+    margin-bottom: 8px;
+}
+
+#current-website {
+    max-width: 100%;
+    word-break: break-all;
+}
+
+#safari-allow-include .heading {
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.47;
+    letter-spacing: normal;
+    color: #6a707b;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#safari-allow-include #address-row {
+    margin-bottom: 30px;
+}
+
+#safari-allow-include label {
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #141519;
+    margin-bottom: 10px;
+}
+
+#safari-allow-include .allow-table {
+    height: 160px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#safari-allow-include table {
+    margin-top: 0;
+}
+
+#safari-allow-include input[type=text] {
+    width: 100%;
+    height: 3.5em;
+    padding: .67857143em 1em;
+    border: 1px solid rgba(34, 36, 38, .15);
+    color: rgba(0, 0, 0, .87);
+    border-radius: .28571429rem;
+    -webkit-transition: border-color .1s ease, -webkit-box-shadow .1s ease;
+    transition: box-shadow .1s ease, border-color .1s ease, -webkit-box-shadow .1s ease;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#allow-table-menu-remove-all {
+    font-weight: normal;
+}
+
+#safari-allow-include table {
+    font-size: 15px;
+    text-align: left;
+    color: rgba(0, 0, 0, .87);
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+#safari-allow-include table tfoot tr td {
+    text-align: center;
+    color: #737a86;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#safari-allow-include th {
+    font-size: 13px;
+    font-weight: 400;
+    color: #6a707b;
+    padding: 0.3em .78571429em;
+    border-top: 1px solid rgba(34, 36, 38, .1);
+    border-radius: .28571429rem;
+}
+
+#safari-allow-include table.ui.table tbody td {
+    font-size: 13px;
+    font-weight: 400;
+    color: #141519;
+    white-space: nowrap;
+    max-width: 248px;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+}
+
+#safari-allow-include table.ui.table tbody tr:hover td {
+    background-color: #eff6ff;
+}
+
+#safari-allow-include table.ui.table tbody td::before,
+#safari-allow-include table.ui.table tbody td::after {
+    z-index: 2;
+}
+
+#safari-allow-include table.ui.table tr:first-child td {
+    border-top: none;
+}
+
+#safari-allow-include table.ui.table tbody tr > td:last-child button {
+    color: #141519;
+    border: none;
+    background-color: transparent;
+}
+
+#safari-support-include {
+    padding-top: 22px;
+    color: #6a707b;
+}
+
+#safari-support-include header {
+    box-shadow: none;
+    font-family: 'graphik-web', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #414042;
+    margin-bottom: 18px;
+}
+
+#safari-support-include.ru header,
+#safari-support-include.pl header {
+    padding-top: 0;
+}
+
+#version-container {
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
+#support-extension-version {
+    color: #141519;
+}
+
+#safari-support-include .version-value {
+    color: #141519;
+}
+
+#update-button-wrapper {
+    margin-top: 10px;
+}
+
+#update-button {
+    font-size: 15px;
+    font-weight: 500;
+    width: 232px;
+    padding-top: .5em;
+    padding-left: 0px;
+    padding-bottom: .5em;
+}
+
+#update-button.blue-bg {
+    background-color: #0D3ECC;
+    color: #fff;
+}
+
+#update-button.disabled {
+    background-color: #D7D8DF;
+    opacity: 1 !important;
+    color: rgba(0, 0, 0, .6) !important;
+}
+
+#update-button.blue-bg.disabled {
+    background-color: #4874F3;
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+#update-button-icon.hidden {
+    opacity: 0;
+    display: inline-block !important;
+}
+
+#update-button > p {
+    display: inline-block;
+}
+
+#update-error {
+    color: red;
+    font-size: 13px;
+    line-height: 13px;
+    margin-top: 3px;
+}
+
+.support-resources-grid {
+    font-size: 15px;
+}
+
+#safari-support-include a {
+    color: #0d3ecc;
+    text-decoration: none;
+}
+
+/* LOCALIZATION CHANGES */
+
+#safari-support-include.ru #version-container,
+#safari-support-include.pl #version-container,
+#safari-support-include.it #version-container,
+#safari-support-include.nl #version-container,
+#safari-support-include.pt #version-container,
+#safari-support-include.es #version-container {
+    margin-bottom: 20px;
+}
+
+/* Hide/Update Zero Image */
+#safari-support-include.ru #support-shizzel {
+    display: none;
+}
+
+.content-container #safari-support-include.pl #support-shizzel {
+    width: 254px;
+}
+
+/* Tighten up support grid */
+.content-container #safari-support-include.ru .support-resources-grid,
+.content-container #safari-support-include.pl .support-resources-grid,
+.content-container #safari-support-include.it .support-resources-grid,
+.content-container #safari-support-include.nl .support-resources-grid,
+.content-container #safari-support-include.pt .support-resources-grid,
+.content-container #safari-support-include.es .support-resources-grid {
+    margin-bottom: 0;
+}
+
+.content-container #safari-support-include.ru .support-resources-grid .column:nth-last-child(-n+2),
+.content-container #safari-support-include.pl .support-resources-grid .column:nth-last-child(-n+2),
+.content-container #safari-support-include.it .support-resources-grid .column:nth-last-child(-n+2),
+.content-container #safari-support-include.nl .support-resources-grid .column:nth-last-child(-n+2),
+.content-container #safari-support-include.pt .support-resources-grid .column:nth-last-child(-n+2),
+.content-container #safari-support-include.es .support-resources-grid .column:nth-last-child(-n+2) {
+    padding: 0 1rem;
+}
+
+/* Tweak database update button size */
+#safari-support-include.ru #update-button-wrapper {
+    display: inline;
+    margin-left: 10px;
+}
+
+#safari-support-include.ru #update-button {
+    font-size: 13px;
+    width: 244px;
+}
+
+#safari-support-include.de #update-button,
+#safari-support-include.nl #update-button {
+    width: 243px;
+}
+
+#safari-support-include.it #update-button,
+#safari-support-include.pt #update-button {
+    width: 255px;
+}
+
+#safari-support-include.pl #update-button {
+    width: 300px;
+}
+
+/* Lower height in spacer */
+#safari-support-include.ru #update-spacer,
+#safari-support-include.pl #update-spacer {
+    height: 10px;
+}
+
+/* Shove up bottom section */
+#safari-support-include.ru .checkbox-container,
+#safari-support-include.pl .checkbox-container,
+#safari-support-include.it .checkbox-container,
+#safari-support-include.nl .checkbox-container,
+#safari-support-include.es .checkbox-container {
+    margin-top: 5px;
+}
+
+
+.support-footer {
+    color: #141519;
+    margin-top: 60px;
+    font-size: 15px;
+}
+
+.ru .support-footer,
+.es .support-footer,
+.nl .support-footer,
+.pt .support-footer,
+.de .support-footer,
+.pl .support-footer {
+    margin-top: 8%;
+}
+
+.fr .support-footer {
+    margin-top: 6%;
+}
+
+.support-footer .support-legal-links {
+    margin-top: 5px;
+}
+
+#support-shizzel {
+    position: absolute;
+    right: 0;
+    top: 117px;
+    width: 282px;
+    z-index: 9;
+}
+.pl #support-shizzel {
+    width: 250px;
+}
+
+#allow-checkbox input:checked ~ label:before {
+    background-color: #0d3ecc !important;
+}
+
+.h-spacer {
+    width: 20px;
+}
+
+.vline {
+    width: 1px;
+    height: 100%;
+    margin: 10px 7.5px 0 2px;
+    border: solid 0.5px #abaebc;
+}
+
+.allow-table-delete-btn, .allow-table-delete-btn > i {
+    cursor: pointer;
+}
+
+.protection-dd-wrapper, .protection-dd-wrapper > div {
+    width: 230px;
+}
+
+#allow-control-protections > a.label {
+    font-size: 10px;
+    padding: 2px;
+}
+
+#allow-control-protections.ui.selection.multiple.dropdown {
+    height: 3.5em;
+}
+
+#allowed-websites-label {
+    flex-grow: 4;
+    align-self: center;
+}
+
+#allow-search-container {
+    flex-grow: 1;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #abaebc;
+}
+
+#safari-allow-include.ru #allow-search-container {
+    flex-grow: 2;
+}
+
+.allow-table-row.hidden {
+    display: none;
+}
+
+/* Protection toggle styles */
+#protection-toggle-wrapper {
+    display: inline-block;
+    background-color: #0d3ecc;
+    border-radius: 33px;
+    width: auto;
+    min-width: 120px;
+    padding: 1%;
+    margin-top: 38px;
+    margin-bottom: 38px;
+    color: white;
+}
+
+#protection-toggle-wrapper input {
+    display: none;
+}
+
+#protection-toggle-wrapper:hover {
+    cursor: pointer;
+}
+
+#protection-toggle-wrapper .protection-toggle-container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#protection-toggle-wrapper .toggle-label-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    order: 1;
+}
+
+#protection-toggle-wrapper.off .toggle-label-container {
+    margin-left: 10px;
+}
+
+#protection-toggle-wrapper .toggle-icon {
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 3px 6px 0 rgba(20, 21, 25, 0.4);
+    order: 2;
+    line-height: 1;
+}
+
+#protection-toggle-wrapper.off {
+    background-color: #d7d8df !important;
+    color: rgba(0,0,0,.87);
+}
+
+
+#protection-toggle-wrapper.off .toggle-label-container {
+    order: 2;
+}
+
+#protection-toggle-wrapper.off .toggle-icon {
+    order: 1;
+}

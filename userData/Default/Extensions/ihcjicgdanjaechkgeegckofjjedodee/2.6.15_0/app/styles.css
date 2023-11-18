@@ -1,0 +1,242 @@
+.checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox>input {
+    height: 16px;
+    width: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border-radius: 4px;
+    outline: none;
+    transition-duration: 0.3s;
+    background-color: #E5E6E8;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+
+.checkbox>input:checked {
+    background-color: #0D3ECC;
+    /* border: 1px solid #0D3ECC; */
+}
+
+.checkbox>input:checked::after {
+    content: url('assets/check-white-small.svg');
+    font-family: 'roboto';
+    display: block;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 0.15rem;
+    top: 0.2rem;
+}
+
+.checkbox>input:active {
+    border: 2px solid #0D3ECC;
+}
+
+.checkbox>label {
+    margin-left: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+}
+
+.loader {
+    width: 14px;
+    height: 14px;
+    border: 2px dotted #1C1B1F;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex.flex-row {
+    flex-direction: row;
+}
+
+.flex.flex-col {
+    flex-direction: column;
+}
+
+.flex.items-center {
+    align-items: center;
+}
+
+.flex.items-start {
+    align-items: flex-start;
+}
+
+.flex.items-end {
+    align-items: flex-end;
+}
+
+.flex.justify-start {
+    justify-content: flex-start;
+}
+
+.flex.justify-center {
+    justify-content: center;
+}
+
+.flex.justify-between {
+    justify-content: space-between;
+}
+
+.flex.justify-end {
+    justify-content: flex-end;
+}
+
+.flex.gap-1 {
+    gap: 8px;
+}
+
+.flex.gap-2 {
+    gap: 16px;
+}
+
+.flex.gap-3 {
+    gap: 24px;
+}
+
+.p-1 {
+    padding: 8px;
+}
+
+.pl-1 {
+    padding-left: 8px;
+}
+
+.pr-1 {
+    padding-right: 8px;
+}
+
+.pt-1 {
+    padding-top: 8px;
+}
+
+.pb-1 {
+    padding-bottom: 8px;
+}
+
+.p-2 {
+    padding: 16px;
+}
+
+.pl-2 {
+    padding-left: 16px;
+}
+
+.pr-2 {
+    padding-right: 16px;
+}
+
+.pt-2 {
+    padding-top: 16px;
+}
+
+.pb-2 {
+    padding-bottom: 16px;
+}
+
+.p-3 {
+    padding: 24px;
+}
+
+.pl-3 {
+    padding-left: 24px;
+}
+
+.pr-3 {
+    padding-right: 24px;
+}
+
+.pt-3 {
+    padding-top: 24px;
+}
+
+.pb-3 {
+    padding-bottom: 24px;
+}
+
+.px-1 {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.py-1 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.px-2 {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.py-2 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.px-3 {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.py-3 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.rounded {
+    border-radius: 8px;
+}
+
+.rounded-2 {
+    border-radius: 16px;
+}
+
+.rounded-3 {
+    border-radius: 24px;
+}
+
+.rounded-full {
+    border-radius: 50%;
+}

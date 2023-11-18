@@ -1,0 +1,128 @@
+{
+  "manifest_version": 3,
+  "author": "Malwarebytes",
+  "name": "Malwarebytes Browser Guard Beta",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "version": "3.0.1",
+  "icons": {
+    "128": "app/assets/icon.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "*.eot",
+        "*.ttf",
+        "*.woff",
+        "*.woff2",
+        "app/assets/close-icon.svg",
+        "app/assets/tooltip.svg",
+        "app/eventpages/block.html",
+        "app/eventpages/block-content-control.html",
+        "app/eventpages/block-mv3.html",
+        "app/eventpages/debugger.html",
+        "app/eventpages/downloading.html",
+        "app/eventpages/block-notification.html",
+        "app/eventpages/block-notification.css",
+        "app/eventpages/block-notification-dark.css",
+        "app/eventpages/monthly-notification.html",
+        "app/eventpages/monthly-notification.css",
+        "app/eventpages/monthly-notification-dark.css",
+        "app/eventpages/clipboard-notification.html",
+        "app/eventpages/clipboard-notification.css",
+        "app/eventpages/clipboard-notification-dark.css",
+        "app/eventpages/empty.html",
+        "injection-instart.js",
+        "injection-tss.js",
+        "injection-tss-notification.js",
+        "vendor/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "externally_connectable": {
+    "matches": [
+      "*://*.msn.com/*"
+    ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.malwarebytes.com/browserguard/*"
+      ],
+      "js": [
+        "content-debugging.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content-scripts.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "action": {
+    "default_icon": "app/assets/icon.png",
+    "default_popup": "app/pop.html",
+    "default_title": "Malwarebytes"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "mbgc.mv3.whitelist_1",
+        "enabled": true,
+        "path": "db/mbgc.mv3.whitelist_1.json"
+      },
+      {
+        "id": "mbgc.mv3.ads_1",
+        "enabled": true,
+        "path": "db/mbgc.mv3.ads_1.json"
+      },
+      {
+        "id": "mbgc.mv3.ads_2",
+        "enabled": false,
+        "path": "db/mbgc.mv3.ads_2.json"
+      },
+      {
+        "id": "mbgc.mv3.ads_3",
+        "enabled": false,
+        "path": "db/mbgc.mv3.ads_2.json"
+      },
+      {
+        "id": "mbgc.mv3.malware_1",
+        "enabled": false,
+        "path": "db/mbgc.mv3.malware_1.json"
+      }
+    ]
+  },
+  "permissions": [
+    "alarms",
+    "downloads",
+    "storage",
+    "tabs",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "unlimitedStorage",
+    "webRequest",
+    "contextMenus",
+    "nativeMessaging"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "incognito": "split"
+}

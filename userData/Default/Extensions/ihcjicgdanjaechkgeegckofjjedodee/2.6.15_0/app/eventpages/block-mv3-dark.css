@@ -1,0 +1,6 @@
+
+@import url("common-styles-dark.css");
+
+#website-blocked>#alert {
+    background-color: transparent;
+}

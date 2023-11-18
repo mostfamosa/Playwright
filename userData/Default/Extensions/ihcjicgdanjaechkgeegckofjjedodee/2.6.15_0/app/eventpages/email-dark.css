@@ -1,0 +1,26 @@
+#malwarebytes-app {
+    background-color: #1C1B1F;
+}
+
+body {
+    color: #FFFFFF !important;
+}
+
+h3, h1, label, .txt {
+    color: #FFFFFF !important;
+}
+
+#email-go {
+    background-color: #7A95E3 !important;
+    color:#1C1B1F;
+}
+#email-go:hover {
+    background-color: #7A95E3 !important;
+}
+#email-pp {
+    color: #9EB2EB !important;
+}
+.telem-checkbox input[type=checkbox]:checked {
+    accent-color: #7A95E3 !important;
+    opacity: 1;
+}

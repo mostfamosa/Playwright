@@ -1,0 +1,37 @@
+  .mb-monthly-notification-box {
+    background: #1C1B1F;
+  }
+
+  .mb-text {
+    color: white;
+  }
+
+  .mb-text-numbers {
+    color: #8ED788;
+  }
+
+  .mb-box-header-content {
+    background: #282A32;
+  }
+
+  .mb-top {
+    background: #282A32;
+  }
+
+  svg {
+   fill: #BBBBBC;
+  }
+
+  svg.round-icon{
+    fill: #2D372F;
+  }
+  #main-icon{
+    fill: #8ED788;
+  }
+  .mb-top-banner {
+   fill: #282A32;
+  }
+
+  .mb-top-banner-text {
+   fill: #fff;
+  }

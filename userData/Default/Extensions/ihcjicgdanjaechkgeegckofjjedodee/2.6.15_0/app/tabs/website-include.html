@@ -1,0 +1,74 @@
+
+<div id="website-include">
+    <div class="ui left internal attached rail">
+        <div class="invalid-data" style="display: none">
+            <div class="invalid-data-warning invalid-data-blocked hidden">
+                <strong><span id="cr-warning"></span>: </strong><span id="cr-warning-text"></span>
+            </div>
+            <div class="invalid-data-warning invalid-data-system hidden" id="system-page-text">
+            </div>
+        </div>
+        <div class="valid-data">
+            <div class="ui middle aligned list">
+                <h4 class="web-tab-rail-title" id="cr-protection-header"></h4>
+                <div class="mb-protection item">
+                    <label for="toggle-ads">Ads/Trackers</label>
+                    <div class="ui right floated website-include-toggle">
+                        <label class="switch">
+                            <input type="checkbox" name="toggle-ad" id="toggle-ads" >
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-protection item">
+                    <label for="toggle-malware">Malware</label>
+                    <div class="ui right floated website-include-toggle">
+                        <label class="switch">
+                            <input type="checkbox" name="toggle-malware" id="toggle-malware" >
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-protection item">
+                    <label for="toggle-scams">Scams</label>
+                    <div class="ui right floated website-include-toggle">
+                        <label class="switch">
+                            <input type="checkbox" name="toggle-scams" id="toggle-scams" >
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-with-rail">
+        <h3 class="ui inline loader active website-name" id="cr-loading-header"></h3>
+        <div class="valid-data blocks-count-result">
+            <div class="count-container">
+                <img src="assets/graph.svg" class="container-stats-no-chart count-circle active" id="container-stats-no-chart-blue" />
+                <img src="assets/graph.svg" class="container-stats-no-chart green-circle active" id="container-stats-no-chart-green" />
+                <img src="assets/pause.svg" class="active" id="container-stats-pause" />
+                <span class="container-stats-summary"><span class="container-stats-summary-count"></span><br><span id="cr-total"></span></span>
+            </div>
+            
+            <div id="ui-empty-container"></div>
+            <div>
+                <h3 class="mb-adnet-tab" id = 'mb-block-result'>
+                    <span id="block-type-l1"></span>
+                    <span id="block-type-l2"></span>
+                </h3>
+            </div>
+            
+            <div class="blocked-list-container">
+                <div id="blocked-list" class="ui divided list ad-list" data-tab="Ad">
+                    <!--<span class="ui empty">Nothing to block.</span>-->
+                    <!-- dynamic -->
+                </div>
+            </div>
+        </div>
+        <div class="invalid-data">
+            <img class="invalid-data-icon" />
+            <span id="cr-cannot"></span>
+        </div>
+    </div>
+</div>

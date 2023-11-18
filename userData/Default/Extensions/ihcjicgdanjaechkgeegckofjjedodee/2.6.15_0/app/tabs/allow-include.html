@@ -1,0 +1,146 @@
+<div id="allow-include">
+    <div class="allow-summary" id="allow-summary"></div>
+    <div class="allow-add-website">
+        <button id="allow-add-website-btn" class="ui basic button">
+            <img src="assets/add-icon.svg" alt="add icon"  class="add icon"/>
+            <span id="add-website-button"></span>
+        </button>
+    </div>
+    <div class="error snackbar" style="visibility:hidden">
+        <img src="assets/close-icon.svg" alt="close-icon" />
+        <span id="error-allow-list-snackbar"></span>
+    </div>
+    <div class="disabled snackbar" style="visibility:hidden">
+        <img src="assets/check.svg" alt="check-icon" />
+        <span id="allow-website-added-snackbar"></span>
+    </div>
+    <div class="remove item snackbar" style="visibility:hidden">
+        <img src="assets/check.svg" alt="check-icon" />
+        <span id="allow-website-deleted-snackbar"></span>
+    </div>
+    <div class="remove all snackbar" style="visibility:hidden">
+        <img src="assets/check.svg" alt="check-icon" />
+        <span id="remove-all-allowed-websites-snackbar"></span>
+    </div> 
+    <div class="ui modal allow-control-row">
+        <img src="assets/close-modal-icon.svg" alt="close icon" class="close-icon" />
+        <div class="allow-list-window">
+            <h3 id="allow-list-window-title"></h3>
+            <div class="add-url">
+                <label for="allow-control-url" class="allow-control-url-wrapper" id="allow-control-urlz"></label>
+                <div class="ui allow-control-url-wrapper first-segment" id='allow-control-url-box'>
+                    <input type="text" placeholder="website.com or 123.45.67.89"
+                           name="allow-control-url" id="allow-control-url" />
+                    <img src="assets/link-icon.svg" class="add-link-icon" data-title="Insert the current website"/>
+                     <div class="allow-modal-link-tooltip" id="allow-modal-link-tooltip" style="display: none;">
+                        <span id="insert-current-website-tooltip"></span>
+                     </div>
+                </div>
+            </div>
+            <div class="disable-options">
+                <label for="allow-control-protections" id="allow-control-disable"></label>
+                <div class="chips">
+                    <div id="allow-control-protections-ads" data-value="Ads">
+                        <img id="allow-control-protections-ads-check" src="assets/check.svg" style="display: none;" alt="check-icon" />
+                        Ads / Trackers
+                    </div>
+                    <div id="allow-control-protections-malware" data-value="Malware">
+                        <img id="allow-control-protections-malware-check" src="assets/check.svg" style="display: none;" alt="check-icon" />
+                        Malware
+                    </div>
+                    <div id="allow-control-protections-scams" data-value="Scams">
+                        <img id="allow-control-protections-scams-check" src="assets/check.svg" style="display: none;" alt="check-icon" />
+                        Scams
+                    </div>
+                </div>
+            </div>
+            <div class="accept-cancel-buttons">
+                <button id="allow-cancel" class="ui basic button cancel"></button>
+                <button id="allow-done" class="ui basic button accept disabled" disabled />
+            </div>
+        </div>
+    </div>
+    <div class="ui modal delete-allow-item hidden" >
+        <img src="assets/close-modal-icon.svg" alt="close icon" class="close-icon" id="close-icon" />
+        <div><h3 id="delete-website-modal-title"></h3>
+        <span id="delete-website-confirmation"></span></div>
+        <div class="accept-cancel-buttons">
+            <button id="cancel-remove-item" class="ui basic button cancel cancel-remove-item"></button>
+            <button id="yes-remove-item" class="ui basic button accept yes-remove-item"></button>
+        </div>
+    </div>
+   
+    <div class="allow-table">
+        <!-- Table MUST be unstackable due to size of our panel causing it to render like it is on mobile -->
+        <table class="ui compact unstackable table">
+            <thead>
+                <div class="input search-bar" style="display: none;">
+                    <input type="text" placeholder="" name="allow-table-search" id="allow-table-search" />
+                    <div class="right-icons">
+                        <img src="assets/close-modal-icon.svg" alt="close icon" class="close-icon"/>
+                        <img src="assets/search-icon.svg" alt="search icon" class="search-icon"/>
+                    </div>
+                </div>
+                <tr>
+                    <th class="six wide column" id="allow-url"></th>
+                    <th class="nine wide column" id="allow-types"></th>
+                    <th>
+                        <div class="ui transparent left icon search-bar">
+                            <img src="assets/search-icon.svg" alt="search icon" class="search-icon">
+                        </div>
+                        <div class="search-icon-tooltip" id="search-icon-tooltip" style="display: none; width: auto;">
+                            <span id="allow-list-search-tooltip"></span>
+                        </div>
+                    </th>
+                    <th class="one wide column">
+                        <div class="ui right aligned dropdown icon allow-table-more disable-protections">
+                            <img src="assets/ellipsis-vertical.svg" alt="ellipsis vertical icon" class="search-icon">
+                            <div class="menu">
+                                <a class="item" id="open-remove-all-btn"></a>
+                            </div>
+                            <div class="ui modal delete-items-window allow all" >
+                                <img src="assets/close-modal-icon.svg" alt="close icon" class="close-icon" />
+                                <div>
+                                    <h3 id="delete-all-modal-title"></h3>
+                                    <span id="delete-all-confirmation"></span>
+                                </div>
+                                <div class="accept-cancel-buttons">
+                                    <button id="cancel-remove-all" class="ui basic button cancel"></button>
+                                    <button id="yes-remove-all" class="ui basic button accept"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot id="empty-list-footer">
+                <tr>
+                    <td colspan="4">
+                        <div class="allow-list-no-items-box">
+                            <img id="empty-list-img"/>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" id="allow-list-empty"></td>
+                </tr>
+            </tfoot>
+            <tfoot id="empty-search-footer" class="hidden">
+                <tr>
+                    <td colspan="4">
+                        <div class="allow-list-no-results-box hidden" style="max-height: 180px;">
+                            <img id="empty-search-img"/>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" id="allow-list-no-results">
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    
+</div>

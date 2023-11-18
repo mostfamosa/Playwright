@@ -1,0 +1,89 @@
+<div id="safari-allow-include" class="flex-column include-container">
+    <span class="heading" id="allow-heading"></span>
+
+    <div class="flex-row">
+        <div class="flex-column" style="flex-grow: 3;">
+            <div class="flex-row">
+                <label for="address-input" id="allow-list-control"></label>
+            </div>
+            <div class="flex-row" id="address-row">
+                <input id="address-input" name="ip-input" type="text" placeholder="website.com or 123.45.67.89"/>
+            </div>
+        </div>
+        <div style="width: 20px;"></div>
+        <div class="flex-column">
+            <div class="flex-row">
+                <label for="allow-control-protections-input" id="allow-list-protections-control"></label>
+            </div>
+            <div class="flex-row protection-dd-wrapper" id="protections-row">
+                <div class="ui multiple selection dropdown" id="allow-control-protections">
+                    <input id="allow-control-protections-input" type="hidden" name="allow-control-protections">
+                    <i class="dropdown icon"></i>
+                    <div class="default text"></div>
+                    <div class="menu">
+                        <div class="item" id="allow-control-protections-ads" data-value="Ads/Trackers">Ads/Trackers</div>
+                        <div class="item" id="allow-control-protections-malware" data-value="Malware">Malware</div>
+                        <div class="item" id="allow-control-protections-scams" data-value="Scams">Scams</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-row">
+        <label id="allow-list-table-header" style="flex-grow: 3; align-self: center;"></label>
+        <div id="allow-search-container" class="ui transparent left icon input">
+            <i class="search icon"></i>
+            <input type="text" placeholder="" name="allow-table-search" id="allow-table-search">
+        </div>
+    </div>
+    <div class="allow-table">
+        <!-- Table MUST be unstackable due to size of our panel causing it to render like it is on mobile -->
+        <table class="ui compact unstackable table">
+            <thead>
+            <tr>
+                <th class="seven wide column" id="url-column-th"></th>
+                <th class="eight wide column" id="url-column-allow"></th>
+                <th class="one wide column">
+                    <div class="ui right aligned dropdown icon allow-table-more">
+                        <i class="ellipsis vertical icon"></i>
+                        <div class="menu">
+                            <a id="allow-table-menu-remove-all" class="item"></a>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot id="empty-list-footer">
+            <tr>
+                <td colspan="2" id="allow-list-empty"></td>
+            </tr>
+            </tfoot>
+            <tfoot id="empty-search-footer" style="display: none">
+            <tr>
+                <td colspan="3" id="allow-list-search-empty"></td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="flex-row" style="flex-grow: 1;"></div>
+    <div class="flex-row" id="button-row">
+        <button id="allow-done-button" class="ui right floated blue button allow-done" style="align-self: flex-end;"></button>
+    </div>
+
+
+</div>
+
+<template id="safari-allow-table-row-template">
+    <tr class="allow-table-row" data-domain="${domain}">
+        <td class="seven wide column">${domain}</td>
+        <td class="eight wide column">${protectionStr}</td>
+        <td>
+        <span class="ellipsis-delete-container allow-table-delete-btn" data-domain="${domain}">
+            <i class="ui trash alternate icon" data-domain="${domain}"></i>
+        </span>
+        </td>
+    </tr>
+</template>

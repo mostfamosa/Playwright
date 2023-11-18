@@ -1,0 +1,23 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="2" y="23" width="17" height="21" rx="1" transform="rotate(-90 2 23)" fill="#F3F5FF"/>
+<path d="M3 11C2.44772 11 2 10.5523 2 10L2 7C2 6.44772 2.44772 6 3 6L22 6C22.5523 6 23 6.44772 23 7L23 11L3 11Z" fill="#DDE8F9"/>
+<rect x="4" y="8" width="2" height="2" rx="1" fill="#5B96EE"/>
+<rect x="17" y="33" width="16" height="21" rx="1" transform="rotate(-90 17 33)" fill="#F3F5FF"/>
+<path d="M8.5 22H4C2.89543 22 2 21.1046 2 20V8C2 6.89543 2.89543 6 4 6H21C22.1046 6 23 6.89543 23 8V8.5" stroke="#DDE8F9" stroke-linecap="round"/>
+<path d="M30.2632 17H36C37.1046 17 38 17.8954 38 19V30C38 31.1046 37.1046 32 36 32H18C17.4477 32 17 31.5523 17 31V31" stroke="#DDE8F9" stroke-linecap="round"/>
+<path d="M8.5 23H4C2.89543 23 2 22.1046 2 21V8C2 6.89543 2.89543 6 4 6H21C22.1046 6 23 6.89543 23 8V9" stroke="#3C454D" stroke-linecap="round"/>
+<path d="M21.0001 25L34 25" stroke="#DDE8F9" stroke-linecap="round"/>
+<path d="M7.00005 14L19 14" stroke="#5B96EE" stroke-linecap="round"/>
+<path d="M7.00005 16L19 16" stroke="#5B96EE" stroke-linecap="round"/>
+<path d="M7.00005 18L19 18" stroke="#5B96EE" stroke-linecap="round"/>
+<path d="M21.0001 27L34 27" stroke="#DDE8F9" stroke-linecap="round"/>
+<path d="M21 29L25 29" stroke="#5B96EE" stroke-linecap="round"/>
+<path d="M1 33H5" stroke="#3C454D" stroke-linecap="round"/>
+<path d="M13 33L35 33" stroke="#3C454D" stroke-linecap="round"/>
+<path d="M8 33H10" stroke="#3C454D" stroke-linecap="round"/>
+<path d="M20 22C19.4477 22 19 21.5523 19 21L19 18C19 17.4477 19.4477 17 20 17L37 17C37.5523 17 38 17.4477 38 18L38 22L20 22Z" fill="#DDE8F9"/>
+<path d="M28 17H36C37.1046 17 38 17.8954 38 19V31C38 32.1046 37.1046 33 36 33H19C17.8954 33 17 32.1046 17 31V27.5" stroke="#3C454D" stroke-linecap="round"/>
+<path d="M18.2102 12.1516C18.7915 11.1727 20.2085 11.1727 20.7898 12.1516L26.7763 22.2342C27.37 23.2341 26.6494 24.5 25.4865 24.5H13.5135C12.3506 24.5 11.63 23.2341 12.2237 22.2342L18.2102 12.1516Z" fill="white" stroke="#3C454D"/>
+<rect x="20.0586" y="15.7059" width="4.47059" height="1.11765" rx="0.558823" transform="rotate(90 20.0586 15.7059)" fill="#5B96EE"/>
+<rect x="20.2002" y="21" width="1.4" height="1.4" rx="0.7" transform="rotate(90 20.2002 21)" fill="#5B96EE"/>
+</svg>

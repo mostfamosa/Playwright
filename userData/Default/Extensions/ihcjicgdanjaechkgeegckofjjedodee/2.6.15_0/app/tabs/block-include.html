@@ -1,0 +1,81 @@
+<div id="block-include">
+    <div class="blocked-items-summary">
+        <span id="blocked-items-summary-1"></span>
+        <a id="blocked-items-summary-learn-more" target="_blank" href="https://links.malwarebytes.com/support/mbbg/block-ads"></a>
+        <span id="blocked-items-summary-2"></span></span>
+    </div>
+    <div id="block-table" class="allow-table">
+        <div class="remove block-item snackbar" style="visibility:hidden">
+            <img src="assets/check.svg" alt="check-icon" />
+            <span id="remove-blocked-item-snackbar"></span>
+        </div>
+        <div class="remove all blocked-items snackbar" style="visibility:hidden">
+            <img src="assets/check.svg" alt="check-icon" />
+            <span id="all-blocked-items-removed-snackbar"></span>
+        </div> 
+        <div class="ui modal delete-blocked-items-window item hidden">
+            <img src="assets/close-modal-icon.svg" alt="close icon" class="close-icon"/>
+                <div><h3 id="delete-blocked-item-modal-title"></h3>
+                <span id="delete-item-confirmation"></span></div>
+                <div class="accept-cancel-buttons">
+                    <button id="cancel-remove-blocked-item" class="ui basic button cancel "></button>
+                    <button id="yes-remove-blocked-item" class="ui basic button accept"></button>
+                </div>
+            </div>
+        <table class="ui compact unstackable table block-table">
+            <thead>
+                <tr>
+                    <th class="fourteen wide column" id="allow-url2"></th>
+                    <th class="two wide column">
+                        <div class="ui right aligned dropdown icon ellipsis-delete-container block-items all">
+                            <img src="assets/ellipsis-vertical.svg" alt="ellipsis vertical icon" class="ellipsis vertical icon">
+                            <div class="menu">
+                                <a class="item" id="open-delete-all-items"></a>
+                            </div>
+                            <div class="ui modal delete-blocked-items-window all" >
+                                <img src="assets/close-modal-icon.svg" alt="close icon" class="close-icon" />
+                                <div>
+                                    <h3 id="delete-all-blocked-items-title"></h3>
+                                    <span id="delete-all-blocked-items-confirmation"></span>
+                                </div>
+                                <div class="accept-cancel-buttons">
+                                    <button id="cancel-remove-all-blocks" class="ui basic button cancel"></button>
+                                    <button id="yes-remove-all-blocks" class="ui basic button accept"></button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot id="empty-list-footer">
+            <tr>
+                <td colspan="3">
+                    <div class="allow-list-no-items-box">
+                        <img id="empty-list-img"/>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" id="block-list-empty"></td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+<template id="block-table-row-template">
+    <tr class="allow-table-row">
+        <td class="fourteen wide column"></td>
+        <td class="two wide column">
+            <div class="ui dropdown ellipsis-delete-container delete-item">
+                <img src="assets/ellipsis-vertical.svg" alt="close icon" class="white-filter">
+                <div class="menu">
+                    <div class="item" id="open-remove-item"><span id="delete-blocked-item-option"></span></div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</template>

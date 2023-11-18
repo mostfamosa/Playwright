@@ -1,0 +1,13 @@
+:root {
+  --mainBackground: #f5f9ff;
+  --footerBackground: #e9f0fa;
+}
+
+body {
+  margin: 0 auto;
+}
+#app {
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vw - (100vw - 100%));
+}

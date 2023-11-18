@@ -1,0 +1,110 @@
+<div id="statistics-include">
+            
+    <div id="get-premium-modal" class="ui modal get-premium-modal">
+        <img src="assets/close-modal-icon.svg" alt="close icon" class="close-icon" />
+        <div>
+            <div>
+                <h3 id="content-control-modal-title"></h3>
+                <span id="content-control-message"></span>
+            </div>
+            <div class="accept-cancel-buttons" >
+                <button type="button" id="content-learn-more" class="ui basic button cancel"></button>
+                <a href="https://malwarebytes.com/premium?guard=1&utm_source=BGreco&utm_medium=stats_tab" target="_blank">
+                    <button type="button" id="content-upgrade" class="ui basic button upgrade"></button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="title-container">
+        <img src="assets/ads.svg" alt="Blocked items icon" class="stats-chart-icon" />
+        <h3 id="stats-chart-title"></h3>
+    </div>
+    <div class="ui dropdown custom stats-chart-range-filter">
+        <div class="text" id="stats-this-week"></div>
+        <i class="chevron down icon" style="margin-left: 12.25px;"></i>
+
+        <div class="menu">
+            <!-- Values are [totalDays, daysPerColumn] -->
+            <div id="stats-today" class="item" data-value="1, 1"></div><!-- 1-day steps -->
+            <div id="stats-this-week-2" class="item active selected" data-value="7, 1"></div>
+            <!-- 1-day steps --><!-- This is what is meant by daily -->
+            <div id="stats-two-weeks" class="item" data-value="14, 7"></div><!-- 1-week steps -->
+            <div id="stats-30-days" class="item" data-value="30, 4"></div><!-- 3-day steps -->
+            <div id="stats-all-time" class="item" data-value="all-time, 1"></div><!-- 3-day steps -->
+        </div>
+    </div>
+    
+    
+
+    <canvas id="stats-chart" class="stats-chart"></canvas>
+    <div id="chart-not-available"><span id="chart-not-available-txt"></span></div>
+    <img id="chart-all-time-stats-info" src="assets/info-icon.svg" alt="info-icon"></img>
+    <div id="all-time-stats-tooltip" class="tooltip" style="width: auto;">
+        <span id="all-time-stats-tooltip-txt"></span><span id="all-time-stats-start-date"></span>
+    </div>
+    <div class="ui cards grid stats-filters">
+
+        <div class="ui card four wide column active" data-line="0" data-chartlabel="Ads / Trackers" data-icon="ads">
+            <div class="ui statistic stats-ads">
+                <div class="stat-card-title">
+                    <img src="assets/ads.svg" alt="Ads icon" class="ui left ads floated stat icon"/>
+                    <div class="label">
+                        Ads/Trackers
+                    </div>
+                </div>
+                <div class="value ui large loader active right floated">
+                </div>
+            </div>
+        </div>
+
+        <div class="ui card four wide column" data-line="1" data-chartlabel="Malware" data-icon="malware">
+            <div class="ui statistic stats-malware">
+                <div class="stat-card-title">
+                    <img src="assets/malware.svg" alt="Malware icon" class="ui left malware floated stat icon"/>
+                    <div class="label">
+                        Malware
+                    </div>
+                </div>
+                <div class="value ui large loader active">
+                </div>
+            </div>
+        </div>
+        <div class="ui card four wide column" data-line="2" data-chartlabel="Scams" data-icon="scams">
+            <div class="ui statistic stats-scams">
+                <div class="stat-card-title">
+                    <img src="assets/scams.svg" alt="Scams icon" class="ui left scams floated stat icon"/>
+                    <div class="label">
+                        Scams
+                    </div>
+                </div>
+                <div class="value ui large loader active">
+                </div>
+            </div>
+        </div>
+
+        <div class="ui card four wide column" data-line="3" data-chartlabel="Content" data-icon="content" id="stats-content-control-card">
+            <div id="content-card">
+                <div class="ui statistic stats-content">
+                    <div class="stat-card-title">
+                        <img src="assets/content.svg" alt="Content icon" class="ui left content floated content icon"/>
+                        <div class="label">
+                            Content
+                        </div>
+                    </div>
+                    <div class="premium-lock-container">
+                        <img class="premium-lock" alt="Locked for premium icon" />
+                    </div>
+                    <div class="value ui large loader active">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="statistic history-container item" data-tab="history">
+        <div class="premium-lock-container">
+            <img class="premium-lock" alt="Locked for premium icon" />
+        </div>
+        <a>Show more history</a>
+        <img src="assets/chevron-right-icon.svg" class="chevron-right-icon"/>
+    </div>
+</div>

@@ -1,0 +1,298 @@
+  .mb-monthly-notification-box {
+    /* Monthly_notification_light */
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: relative;
+    width: 480px;
+    height: 260px;
+
+    /* Backgrounds/Light Mode / Primary */
+
+    background: #ffffff;
+    /* Elevation/Light/Elevation 3
+    
+    Dialogs and cards
+    */
+    box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+  }
+
+  .mb-text {
+    color: black;
+  }
+
+  .mb-text-numbers {
+    color: #36962d;
+    align-self: center;
+  }
+  .mb-text-numbers.disabled {
+    color: #8D8D8F;
+  }
+  .mb-box-header-content {
+    /* _content */
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    isolation: isolate;
+
+    width: 100%;
+    height: 33px;
+    border-radius: 16px;
+
+    /* Inside auto layout */
+
+    order: 0;
+    flex-grow: 0;
+    background: #F6F7F7;
+  }
+
+  .mb-top {
+    /* top */
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 0px;
+
+    width: 100%;
+    height: 32px;
+
+    /* Backgrounds/Light Mode/Secondary */
+
+    background: #f6f7f7;
+    border-radius: 16px 16px 0px 0px;
+
+    /* Inside auto layout */
+
+    flex: 0 0 auto;
+    order: 0;
+    flex-grow: 0;
+    z-index: 0;
+  }
+
+  .mb-rightdiv {
+    margin: 9px 9px 9px 7px;
+  }
+
+  .mb-topleft {
+    display: flex;
+  }
+
+  .mb-dividers {
+    /* Divider */
+
+    width: 100%;
+    height: 1px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 1;
+
+    /* ➖Divider */
+
+    /* Shades/Neutral/10
+    
+    Dark
+    */
+    background: #1c1b1f;
+    mix-blend-mode: normal;
+    opacity: 0.1;
+  }
+
+  .mb-divider {
+    /* ➖Divider */
+
+    /* Shades/Neutral/10
+    
+    Dark
+    */
+    background: #1c1b1f;
+    mix-blend-mode: normal;
+    opacity: 0.1;
+  }
+
+  .mb-icons {
+    /* Icons/close_24px
+    
+    cancel, exit, x, stop, close
+    */
+
+    transform: rotate(180deg);
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    z-index: 2;
+  }
+
+  .mb-icon {
+    /* icon */
+
+    /* Icons/Light Mode/Secondary */
+
+    background: rgba(28, 27, 31, 0.7);
+    transform: rotate(180deg);
+  }
+
+  .mb-card {
+    /* card */
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+
+    width: 100%;
+    height: 204px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+
+  .mb-card-content {
+    /* _content */
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 24px;
+    gap: 24px;
+
+    width: 90%;
+    height: 156px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .mb-card-text-title {
+    /* _title */
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    /* width: 376px; */
+    height: 24px;
+
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    letter-spacing: 0.15px;
+  }
+
+  .mb-card-text-item-header {
+    min-height: 2.5em;
+  }
+
+  .mb-card-text-footer {
+    /* Body/Medium */
+
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+
+    letter-spacing: 0.25px;
+    margin-top: 1em;
+  }
+
+  .mb-card-text-body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .mb-card-text-item {
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+    margin: 20px 0px;
+    width: 25%;
+    height: 60px;
+
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+
+    letter-spacing: 0.5px;
+  }
+
+  .mb-card-text-divider {
+    width: 1px;
+    height: 50px;
+    margin: 5px;
+  }
+
+  .mb-card-text-item-body {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 28px;
+    /* identical to box height, or 108% */
+
+    text-align: center;
+  }
+
+  svg {
+    fill: #605F62;
+  }
+
+  svg.round-icon{
+    fill: #E3F5E1;
+  }
+  #main-icon{
+    fill: #43BC38;
+  }
+
+  .mb-top-banner {
+    fill: #F6F7F7;
+  }
+
+  .mb-top-banner-text {
+    fill: #0d3ecc;
+  }

@@ -1,0 +1,145 @@
+<div id="settings-include">
+    <div class="ui modal killswitch-confirmation hidden" >
+        <img src="assets/close-modal-icon.svg" alt="close icon" class="close-icon" id="close-icon" />
+        <div><h3 id="killswitch-modal-title"></h3>
+        <span id="killswitch-modal-description"></span></div>
+        <div class="accept-cancel-buttons">
+            <button id="killswitch-confirmation-cancel" class="ui basic button cancel cancel-remove-item"></button>
+            <button id="killswitch-confirmation-yes" class="ui basic button accept yes-remove-item"></button>
+        </div>
+    </div>
+    <div class="settings-summary" id="settings-sum"></div>
+    <div class="overflow-scroll-gradient">
+        <div class="ui divided list settings-list overflow-scroll-gradient__scroller" id="mb-settings-list">
+
+            <div class="item">
+                <div class="content">
+                    <h3 id="mb-pause-label"></h3>
+                    <div class="ui right floated settings-toggle">
+                        <label class="switch" id="killswitch-label">
+                            <input type="checkbox" name="settings-toggle-killswitch" id="settings-toggle-killswitch">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="description" id="mb-pause-desc"></div>
+                </div>
+
+            </div>
+            <div class="item protection-setting">
+                <div class="content">
+                    <h3>Ads/Trackers</h3>
+                    <div class="ui right floated settings-toggle">
+                        <label class="switch">
+                            <input type="checkbox" name="settings-toggle-ads" id="settings-toggle-ads">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="description" id="ads-tracker-desc"></div>
+                </div>
+            </div>
+            <div class="item protection-setting">
+                <div class="content">
+                    <h3>Malware</h3>
+                    <div class="ui right floated settings-toggle">
+                        <label class="switch">
+                            <input type="checkbox" name="settings-toggle-malware" id="settings-toggle-malware">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="description" id="malware-desc"></div>
+                </div>
+            </div>
+
+            <div class="item protection-setting" id="setting-toggle-scams-parent">
+                <div class="content">
+                    <h3>Scams</h3>
+                    <div class="ui right floated settings-toggle">
+                        <label class="switch">
+                            <input type="checkbox" name="settings-toggle-scams" id="settings-toggle-scams">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="description" id="scam-desc"></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="content">
+                    <h3>gTLD domains</h3>
+                    <div class="ui right floated settings-toggle">
+                        <label class="switch">
+                            <input type="checkbox" name="settings-toggle-gtld" id="settings-toggle-gtld">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="description" id="gtld-desc"></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="content">
+                    <h3 id="block-count-desc-label"></h3>
+                    <div class="ui right floated settings-toggle">
+                        <label class="switch">
+                            <input type="checkbox" name="settings-toggle-block-count" id="settings-toggle-block-count">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="description" id="block-count-desc"></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="content">
+                    <h3 id="skimmer-desc-label"></h3>
+                    <div class="ui right floated settings-toggle">
+                        <label class="switch">
+                            <input type="checkbox" name="settings-toggle-skimmer-protection"
+                                id="settings-toggle-skimmer-protection">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="description" id="skimmer-desc"></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="content">
+                    <h3 id="verbose-logging-desc-label"></h3>
+                    <div class="ui right floated settings-toggle">
+                        <label class="switch">
+                            <input type="checkbox" name="settings-toggle-verbose-logging"
+                                id="settings-toggle-verbose-logging">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="description" id="verbose-logging-desc"></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="content">
+                    <h3 id="notifications-label"></h3>
+                    <div class="ui right floated settings-toggle" id="monthly-notification-toggle">
+                        <label class="switch">
+                            <input type="checkbox" name="settings-toggle-monthly-notification"
+                                id="settings-toggle-monthly-notification">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="description" id="monthly-notification-desc"></div>
+                    <!-- Malicious notification option -->
+                    <div class="ui right floated settings-toggle" id="malicious-notification-toggle">
+                        <label class="switch">
+                            <input type="checkbox" name="settings-toggle-malicious-notification"
+                                id="settings-toggle-malicious-notification">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="description" id="malicious-notification-desc"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

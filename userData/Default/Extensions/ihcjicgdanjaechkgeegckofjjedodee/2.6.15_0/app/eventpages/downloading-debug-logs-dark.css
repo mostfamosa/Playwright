@@ -1,0 +1,31 @@
+@import url("common-styles-dark.css");
+#download-debug-logs-body{
+    background-color: #1C1B1F;
+}
+#download-debug-logs-body .debug-page-header{
+    border-bottom: 1.2px solid #3E3D41;
+}
+#download-debug-logs-body .debug-page-header #header-logo{
+    content: url('../assets/welcome-header-dark.svg');
+}
+#download-debug-logs-body .download-debug-logs-content .img-container.downloading #downloading-img{
+    content: url('../assets/downloading-icon-dark.svg');
+}
+#download-debug-logs-body .download-debug-logs-content .img-container.complete #downloading-img{
+    content: url('../assets/debug-download-complete-dark.svg');
+}
+#download-debug-logs-body .download-debug-logs-content .img-container.error #downloading-img{
+    content: url('../assets/debug-download-error-dark.svg');
+}
+#download-debug-logs-body .download-debug-logs-content .progress-bar-container.downloading #progress-bar{
+    content: url('../assets/progress-bar-dark.svg');
+}
+#download-debug-logs-body .download-debug-logs-content .progress-bar-container.complete #progress-bar{
+    content: url('../assets/progress-bar-complete-dark.svg');
+}
+#download-debug-logs-body .download-debug-logs-content .progress-bar-container.error #progress-bar{
+    content: url('../assets/progress-bar-error-dark.svg');
+}
+#progress-percentage{
+    color:rgba(255, 255, 255, 0.95);
+}
