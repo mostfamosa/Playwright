@@ -8,6 +8,8 @@ const BASE_URL = 'https://tase.co.il';
 const COMMON_ROWS_IN_TABLE_BROWSER = 4;
 const COMMON_ROWS_IN_TABLE_FILE = 3;
 const FILE_NAME = "downloadedFile.csv";
+const DATE = "01/10/2023";
+const CATEGORY_VALUE = "12";
 
 test.describe('State Stock Table Validation Suite', () => {
 
