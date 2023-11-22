@@ -1,7 +1,0 @@
-2023/11/17-19:24:55.726 4b4 Reusing MANIFEST C:\Users\Moose\AppData\Local\Google\Chrome\User Data\Default\WebStorage\49\IndexedDB\indexeddb.leveldb/MANIFEST-000001
-2023/11/17-19:24:55.727 4b4 Recovering log #3
-2023/11/17-19:24:55.728 4b4 Reusing old log C:\Users\Moose\AppData\Local\Google\Chrome\User Data\Default\WebStorage\49\IndexedDB\indexeddb.leveldb/000003.log 
-2023/11/17-19:24:55.984 3660 Level-0 table #5: started
-2023/11/17-19:24:55.991 3660 Level-0 table #5: 9044 bytes OK
-2023/11/17-19:24:55.993 3660 Delete type=0 #3
-2023/11/17-19:24:55.993 3660 Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)
