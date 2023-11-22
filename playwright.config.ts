@@ -18,7 +18,7 @@ export default defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: 1,//process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 1 : undefined,//1,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -27,7 +27,7 @@ export default defineConfig({
     // baseURL: 'http://127.0.0.1:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'on',
     headless: false,
     extraHTTPHeaders: {
       "Ecomtoken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3d3dy1hcGkucmFtaS1sZXZ5LmNvLmlsIiwiYXVkIjoiaHR0cHM6Ly93d3ctYXBpLnJhbWktbGV2eS5jby5pbCIsImlhdCI6MTcwMDQ5MzY3Ny40NTU4OTEsIm5iZiI6MTcwMDQ5MzczNy40NTU4OTEsImV4cCI6MTcwNTY3NzY3Ny40NTU4OTEsImlkIjo5MTI2MTksImVtYWlsIjoibW9zdGZhLmcubUBnbWFpbC5jb20iLCJjaWQiOiI5OTAwMTU3MDg0NCJ9.vjT8X38pcTx4RdfjBYOo8Vm49bbws0c-uOYsFe5Ohfs"
