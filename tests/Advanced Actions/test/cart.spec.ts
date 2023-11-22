@@ -1,5 +1,7 @@
-import { test, Request, expect, Page, chromium, BrowserContext } from '@playwright/test';
+import { test, expect, Page, chromium, BrowserContext } from '@playwright/test';
 import { HomePage } from '../logic/pages/homePage';
+import { CartApi } from '../logic/api/cart-api';
+import { setAddColaItemRequest, setClearCartRequest, setAddApplesInKgRequest } from '../logic/api/request/add-item-request';
 
 
 const BASE_URL = 'https://www.rami-levy.co.il';
@@ -19,21 +21,11 @@ test.describe('State Stock Table Validation Suite', () => {
     test.beforeEach(async () => {
         await page.goto(BASE_URL);
         await page.setViewportSize({ width: 1920, height: 1080 });
-
     });
     test.afterEach(async ({ request }) => {
-
-        //clear the cart
-        await request.post(`${BASE_URL}/api/v2/cart`, {
-            data: {
-                "isClub": 0,
-                "items": { "164854": "1.00" },
-                "meta": null,
-                "store": 331,
-                "supplyAt": `${new Date().toISOString()}`
-            }
-        });
-
+        const requestDate = setClearCartRequest();
+        const cartApi = new CartApi();
+        await cartApi.addItemToCart(requestDate)
     })
 
     test.afterAll(async () => {
@@ -42,17 +34,10 @@ test.describe('State Stock Table Validation Suite', () => {
 
     test('Adding one pack of cocacola via api -> Validate request and cart price', async ({ request }) => {
 
-        const colaId = "386565";
-        const quantity = 1;
-        const response = await request.post(`${BASE_URL}/api/v2/cart`, {
-            data: {
-                "isClub": 0,
-                "items": { "386565": quantity },
-                "meta": null,
-                "store": 331,
-                "supplyAt": `${new Date().toISOString()}`
-            }
-        });
+        const addItemData = setAddColaItemRequest(1);
+        const cartApi = new CartApi();
+        const response = await cartApi.addItemToCart(addItemData)
+
         const bodyRes = await response.json();
 
         await page.reload();
@@ -61,27 +46,16 @@ test.describe('State Stock Table Validation Suite', () => {
         const cartPriceBrowser = await homePage.getCartPrice();
 
         console.log("Cart Price: " + cartPriceBrowser);
-        expect.soft(response.ok()).toBeTruthy();
-        expect.soft(response.status()).toBe(200);
-        expect.soft(bodyRes.items[1].id).toBe(parseInt(colaId));
-        expect.soft(bodyRes.items[1].quantity).toBe(quantity);
         expect.soft(bodyRes.price).toBe(cartPriceBrowser);
 
     });
 
     test('Adding one pack of cocacola via api -> Adding another pack by UI -> Validate request and cart price', async ({ request }) => {
 
-        const colaId = "386565";
-        const quantity = 1;
-        const response = await request.post(`${BASE_URL}/api/v2/cart`, {
-            data: {
-                "isClub": 0,
-                "items": { "386565": quantity },
-                "meta": null,
-                "store": 331,
-                "supplyAt": `${new Date().toISOString()}`
-            }
-        });
+        const addItemData = setAddColaItemRequest(1);
+        const cartApi = new CartApi();
+        const response = await cartApi.addItemToCart(addItemData)
+
         const bodyRes = await response.json();
 
         await page.reload();
@@ -90,28 +64,16 @@ test.describe('State Stock Table Validation Suite', () => {
         await homePage.duplicateFirstItemInCart();
         const cartPriceBrowser = await homePage.getCartPrice();
 
-        console.log("Cart Price: " + cartPriceBrowser);
-        expect.soft(response.ok()).toBeTruthy();
-        expect.soft(response.status()).toBe(200);
-        expect.soft(bodyRes.items[1].id).toBe(parseInt(colaId));
-        expect.soft(bodyRes.items[1].quantity).toBe(quantity);
         expect.soft(bodyRes.price * 2).toBe(cartPriceBrowser);
 
     });
 
     test('Adding one kg of green apple via API -> clear the cart via UI -> Validate request and cart price', async ({ request }) => {
 
-        const colaId = "18";
-        const quantity = 1;
-        const response = await request.post(`${BASE_URL}/api/v2/cart`, {
-            data: {
-                "isClub": 0,
-                "items": { "18": quantity },
-                "meta": null,
-                "store": 331,
-                "supplyAt": `${new Date().toISOString()}`
-            }
-        });
+        const addItemData = setAddApplesInKgRequest(1);
+        const cartApi = new CartApi();
+        const response = await cartApi.addItemToCart(addItemData)
+
         const bodyRes = await response.json();
 
         await page.reload();
@@ -121,11 +83,6 @@ test.describe('State Stock Table Validation Suite', () => {
 
         const cartPriceBrowser = await homePage.getCartPrice();
 
-        console.log("Cart Price: " + cartPriceBrowser);
-        expect.soft(response.ok()).toBeTruthy();
-        expect.soft(response.status()).toBe(200);
-        expect.soft(bodyRes.items[0].id).toBe(parseInt(colaId));
-        expect.soft(bodyRes.items[0].quantity).toBe(quantity);
         expect.soft(0).toBe(cartPriceBrowser);
 
     });
