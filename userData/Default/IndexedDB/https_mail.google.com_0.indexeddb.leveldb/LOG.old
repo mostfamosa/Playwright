@@ -1,7 +1,0 @@
-2022/05/23-17:55:27.405 57b4 Reusing MANIFEST C:\Users\Moose\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_mail.google.com_0.indexeddb.leveldb/MANIFEST-000001
-2022/05/23-17:55:27.405 57b4 Recovering log #3
-2022/05/23-17:55:27.416 57b4 Reusing old log C:\Users\Moose\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_mail.google.com_0.indexeddb.leveldb/000003.log 
-2022/05/27-15:09:07.975 6430 Level-0 table #5: started
-2022/05/27-15:09:07.989 6430 Level-0 table #5: 1167245 bytes OK
-2022/05/27-15:09:07.991 6430 Delete type=0 #3
-2022/05/27-15:09:07.992 6430 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

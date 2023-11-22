@@ -1,1 +1,0 @@
-Bloker popups og popunders, uanset hvor du klikker på en side.
