@@ -1,7 +1,7 @@
 import { test, expect, Browser, chromium } from '@playwright/test';
 import { HomePage } from '../logic/pages/homePage';
 import { PricingPage } from '../logic/pages/pricingPage';
-import { UserType } from '../utils/user-type-pricing';
+import { UserType } from '../logic/utils/user-type-pricing';
 
 const BASE_URL = 'https://todoist.com';
 

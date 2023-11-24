@@ -1,6 +1,6 @@
 import { Locator, Page } from "@playwright/test";
 import { BasePage } from "./basePage";
-import { UserType } from "../../utils/user-type-pricing";
+import { UserType } from "../utils/user-type-pricing";
 
 export class PricingPage extends BasePage {
 

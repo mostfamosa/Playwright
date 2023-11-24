@@ -1,6 +1,6 @@
 import { Locator, Page } from "@playwright/test";
 import { BasePage } from "./basePage";
-import { ResourcesOptions } from "../../utils/resources-options";
+import { ResourcesOptions } from "../utils/resources-options";
 
 
 

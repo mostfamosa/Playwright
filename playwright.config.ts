@@ -10,7 +10,7 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './tests',
+  testDir: './tests/Advanced Config And Debug/test',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -27,7 +27,7 @@ export default defineConfig({
     // baseURL: 'http://127.0.0.1:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on',
+    trace: 'retain-on-failure',
     headless: false,
     extraHTTPHeaders: {
       "Ecomtoken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3d3dy1hcGkucmFtaS1sZXZ5LmNvLmlsIiwiYXVkIjoiaHR0cHM6Ly93d3ctYXBpLnJhbWktbGV2eS5jby5pbCIsImlhdCI6MTcwMDQ5MzY3Ny40NTU4OTEsIm5iZiI6MTcwMDQ5MzczNy40NTU4OTEsImV4cCI6MTcwNTY3NzY3Ny40NTU4OTEsImlkIjo5MTI2MTksImVtYWlsIjoibW9zdGZhLmcubUBnbWFpbC5jb20iLCJjaWQiOiI5OTAwMTU3MDg0NCJ9.vjT8X38pcTx4RdfjBYOo8Vm49bbws0c-uOYsFe5Ohfs"

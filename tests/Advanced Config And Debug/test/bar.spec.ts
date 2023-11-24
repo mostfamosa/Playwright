@@ -1,7 +1,7 @@
 import { test, expect, Browser, chromium } from '@playwright/test';
 import { HomePage } from '../logic/pages/homePage';
-import { ResourcesOptions } from '../utils/resources-options';
-import { BarOptions } from '../utils/bar-options';
+import { ResourcesOptions } from '../logic/utils/resources-options';
+import { BarOptions } from '../logic/utils/bar-options';
 
 const BASE_URL = 'https://todoist.com';
 const pricingLink = "https://todoist.com/pricing";
