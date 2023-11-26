@@ -30,14 +30,17 @@ export class SignInPage extends BasePage {
     }
 
     private async fillUserNameInput(username: string) {
+        await this.page.waitForSelector(this.USERNAME_INPUT_LOC);
         await this.userNameInput.fill(username);
     }
 
     private async fillPasswordInput(password: string) {
+        await this.page.waitForSelector(this.PASSWORD_INPUT_LOC);
         await this.passwordInput.fill(password);
     }
 
     private async pressSignIn() {
+        await this.page.waitForSelector(this.SIGN_IN_BUTTON_LOC);
         await this.signInBtn.click();
     }
 }

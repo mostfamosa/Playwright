@@ -25,6 +25,7 @@ export class HomePage extends BasePage {
 
 
     async searchForCard(input: string) {
+        await this.page.waitForSelector(this.SEARCH_INPUT_LOC);
         await this.searchInput.fill(input);
         await this.searchBtn.click();
     }

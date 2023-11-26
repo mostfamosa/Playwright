@@ -38,22 +38,27 @@ export class RegisterPage extends BasePage {
     }
 
     private async fillUserNameInput(username: string) {
+        await this.page.waitForSelector(this.USERNAME_INPUT_LOC);
         await this.userNameInput.fill(username);
     }
 
     private async fillPasswordInput(password: string) {
+        await this.page.waitForSelector(this.PASSWORD_CONFIRM_INPUT_LOC);
         await this.passwordInput.fill(password);
     }
 
     private async fillConfirmPasswordInput(confirmPassword: string) {
+        await this.page.waitForSelector(this.PASSWORD_CONFIRM_INPUT_LOC);
         await this.confirmPasswordInput.fill(confirmPassword);
     }
 
     private async fillEmailInput(email: string) {
+        await this.page.waitForSelector(this.EMAIL_INPUT_LOC);
         await this.emailInput.fill(email);
     }
 
     private async pressSignIn() {
+        await this.page.waitForSelector(this.REGISTER_BUTTON_LOC);
         await this.registerBtn.click();
     }
 }

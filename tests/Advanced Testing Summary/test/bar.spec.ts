@@ -25,7 +25,6 @@ test.describe('SignIn Page Validations Suite', () => {
 
         const homePage = new HomePage(page);
         await homePage.header.pressHome();
-        await homePage.waitForLoad();
 
         let currentUrl = await homePage.getCurrentUrl();
         expect(currentUrl).toBe(expectedUrl);
@@ -36,7 +35,6 @@ test.describe('SignIn Page Validations Suite', () => {
 
         const homePage = new HomePage(page);
         await homePage.header.pressBrowseSets();
-        await homePage.waitForLoad();
 
         let currentUrl = await homePage.getCurrentUrl();
         expect(currentUrl).toBe(expectedUrl);

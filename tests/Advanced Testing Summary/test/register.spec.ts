@@ -37,7 +37,6 @@ test.describe('Register Page Validations Suite', () => {
             await homePage.header.pressRegister();
 
             const registerPage = new RegisterPage(page);
-            await registerPage.waitForLoad();
             await registerPage.registerFullProccess(user.username, user.password, user.confirmPassword, user.email);
 
             let message = await registerPage.getSiteMessage();
