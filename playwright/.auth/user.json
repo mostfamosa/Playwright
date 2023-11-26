@@ -1,0 +1,75 @@
+{
+  "cookies": [
+    {
+      "name": "PHPSESSID",
+      "value": "tl1b5vgnmlc9hqk2bs8o8tfqv2",
+      "domain": "www.pokellector.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "NID",
+      "value": "511=k7kTDm1QIwLEvCj91v_76A-D0h-tG1qNF8I_3DRoTDGJrMeuLKBZ4hHf1j624AZgsBO1smHQaZNXZmqK6YV-rM3Zu6Lk_IXpCzGRaA0XtJzjMz_7-Wm-c12D5Mm65DmKa-narB44bdTKFkgA9zLLOZ6c-U7ASL_7tenxLTpkn5U",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1716822532.640763,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "UID",
+      "value": "1D46d13e2cfbd7d83251bd81701011335",
+      "domain": ".scorecardresearch.com",
+      "path": "/",
+      "expires": 1735571333.957569,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.2.957683203.1701011333",
+      "domain": ".pokellector.com",
+      "path": "/",
+      "expires": 1735571332.694538,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gid",
+      "value": "GA1.2.1777624634.1701011333",
+      "domain": ".pokellector.com",
+      "path": "/",
+      "expires": 1701097732,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gat",
+      "value": "1",
+      "domain": ".pokellector.com",
+      "path": "/",
+      "expires": 1701011392,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "plut",
+      "value": "676443%3A9c196736feed522e5a972260ca73f8f0%3A7bda7e05fda1472c346401a6b7a6f7f359b9c1f14f1dfe40305f28e0d13b2891",
+      "domain": ".pokellector.com",
+      "path": "/",
+      "expires": 1702220933.665748,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": []
+}

@@ -10,7 +10,7 @@ export class Header extends BaseComponent {
     private readonly SIGN_IN_BUTTON_LOC = "//div[@class='userinfo']//a[contains(string(),'sign in')]";
     private readonly REGISTER_BUTTON_LOC = "//div[@class='userinfo']//a[contains(string(),'register')]";
     private readonly USERNAME_LOC = "//div[@class='userinfo']//*[@class='username']";
-
+    private readonly COLLECTION_LINK_LOC = "//div[@class='userinfo']//a[text()='collection']";
 
     private homeBtn: Locator;
     private browseSetsBtn: Locator;
@@ -47,6 +47,10 @@ export class Header extends BaseComponent {
     async pressRegister() {
         this.registerBtn = this.page.locator(this.REGISTER_BUTTON_LOC);
         await this.registerBtn.click();
+    }
+
+    async pressCollection() {
+        await this.page.locator(this.COLLECTION_LINK_LOC).click();
     }
 
     async getUserName() {

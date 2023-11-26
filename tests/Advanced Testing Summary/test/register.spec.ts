@@ -5,7 +5,7 @@ import { RegisterPage } from "../logic/pages/register"
 const BASE_URL = 'https://www.pokellector.com/';
 
 test.describe('Register Page Validations Suite', () => {
-
+    test.use({ storageState: 'playwright/.auth/empty.json' });
     let browser: Browser;
 
     test.beforeAll(async () => {

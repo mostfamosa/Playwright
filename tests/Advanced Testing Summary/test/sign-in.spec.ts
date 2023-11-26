@@ -5,7 +5,7 @@ import { SignInPage } from "../logic/pages/signin-page"
 const BASE_URL = 'https://www.pokellector.com/';
 
 test.describe('SignIn Page Validations Suite', () => {
-
+    test.use({ storageState: 'playwright/.auth/empty.json' });
     let browser: Browser;
 
     test.beforeAll(async () => {
